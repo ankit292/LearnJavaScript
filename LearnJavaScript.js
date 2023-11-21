@@ -135,4 +135,30 @@ let newSortArr1 = sortArr1.sort()
 
 let spliceArr = [1,2,3,4,5]
 spliceArr.splice(1,2,9)
-console.log(spliceArr)
+//console.log(spliceArr)
+
+//Object ===================
+let assignObj1 = {1:'a',2:'b'}
+let assignObj2 = {3:'a',4:'b'}
+let assignObj3 = {5:'a',6:'b'}
+let newAssignObj = Object.assign({},assignObj1,assignObj2,assignObj3)
+// console.log(newAssignObj);
+// console.log(assignObj1);
+
+let personObj = {
+    isHuman:false,
+    prinIntro:function(){
+        console.log(`my name is ${this.name} i m human ${this.isHuman}`)
+    }
+}
+let meObj = Object.create(personObj)
+meObj.name = 'Ankit'
+meObj.isHuman= true;
+meObj.prinIntro()
+
+let hasOwnObj = {1:'a',2:'b'}
+//console.log(Object.hasOwn(hasOwnObj,1));
+
+let destruObj = {name:'Ankit',age:26,emailId:'ankit@gmail.com'}
+let {name: n , age: ag, emailId: e} = destruObj;
+console.log(n + ag + e);
