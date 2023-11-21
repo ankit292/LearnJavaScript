@@ -67,4 +67,72 @@ let myDate = new Date()
 
 //array
 
+let fArr = [1,2,3]
+let sArr = [4,5,6]
+let cArr = fArr.entries()
+//console.log(cArr)
 
+let everyFunc = (everyF)=> everyF < 4 ;
+//console.log(sArr.every(everyFunc));
+
+let fillArr = [0,1,2,3,4,5,6]
+//console.log(fillArr.fill(1,2,5))
+
+let filterArr = ['Ankit','Rishabh','Anshika','Ayush','Ayushmaan','Tony']
+let newFilter = filterArr.filter((val) => {return val.length >= 5})
+//console.log( newFilter);
+
+let findArr = [1,2,3,4,5]
+let newFind = findArr.find((val)=> val >3)
+//let newFind = findArr.findIndex((val)=> val >3)
+//console.log(newFind);
+
+let findLastArr = [1,2,3,4,5]
+//let newLastArr = findLastArr.findLast((val) => val > 3)
+let newLastArr = findLastArr.findLastIndex((val) => val > 3)
+//console.log(newLastArr);
+
+let flatArr = [1,[2,[3,[4,[5]]]]]
+let newFlatArr = flatArr.flat(Infinity)
+//console.log(newFlatArr);
+
+let flatMapArr = [1,2,3,1]
+let newFlatMapArr = flatMapArr.flatMap((val) => val === 2? [5,6] : 0)
+//console.log(newFlatMapArr);
+
+let forEachArr = ['a','b','c','d']
+//forEachArr.forEach((val) =>console.log(val))
+
+let joinArr = [1,2,3,4,5]
+let newJoinArr = joinArr.join('/')
+//console.log(newJoinArr);
+let getKeyArr = joinArr.keys()
+// for(let key of getKeyArr){
+//     console.log(key)
+// }
+
+
+let mapArr = [2,3,4,5]
+let newMapArr = mapArr.map((val) => val * 2)
+//console.log(newMapArr)
+
+let popArr = [1,2,3,4,5]
+let newPopArr = popArr.pop()
+// console.log(newPopArr)
+// console.log(popArr)
+
+let pushArr = [1,2,3,4,5]
+let newPushArr = pushArr.push(6)
+// console.log(newPushArr)
+// console.log(pushArr)
+
+let sortArr = [2,333,4,55,11111]
+let newSortArr = sortArr.sort()
+
+let sortArr1 = ['Ankit','Deepa','Jyoti','Sachin','Pooja']
+let newSortArr1 = sortArr1.sort()
+//console.log(newSortArr1);
+
+let spliceArr = [1,2,3,4,5]
+spliceArr.splice(1,2,9)
+console.log(spliceArr)
