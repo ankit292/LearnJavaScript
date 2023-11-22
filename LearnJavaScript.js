@@ -189,5 +189,78 @@ function one(){
 one();
 
 (function chai(){
-    console.log('Hello ankit')
+    //console.log('Hello ankit')
 })();
+
+// loop ===================
+const forOf = [1,2,3,4,5,'ankit']
+for(let key of forOf){
+    //console.log(key);
+}
+
+const games = {
+    game1: 'nfs',
+    game2: 'god of war'
+}
+for(const key in games){
+    //console.log(key + ' = ' + games[key]);
+}
+
+const userRandom = [ 
+    {
+    "id": 1,
+    "title": "iPhone 9",
+    "description": "An apple mobile which is nothing like apple",
+    "price": 549,
+    "discountPercentage": 12.96,
+    "rating": 4.69,
+    "stock": 94,
+    "brand": "Apple",
+    "category": "smartphones",
+    "thumbnail": "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
+    "images": "https://i.dummyjson.com/data/products/1/1.jpg"
+    },
+    {
+        "id": 2,
+        "title": "iPhone X",
+        "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
+        "price": 899,
+        "discountPercentage": 17.94,
+        "rating": 4.44,
+        "stock": 34,
+        "brand": "Apple",
+        "category": "smartphones",
+        "thumbnail": "https://i.dummyjson.com/data/products/2/thumbnail.jpg",
+        "images": "https://i.dummyjson.com/data/products/2/thumbnail.jpg"
+    },
+    {
+        "id": 3,
+        "title": "Samsung Universe 9",
+        "description": "Samsung's new variant which goes beyond Galaxy to the Universe",
+        "price": 1249,
+        "discountPercentage": 15.46,
+        "rating": 4.09,
+        "stock": 36,
+        "brand": "Samsung",
+        "category": "smartphones",
+        "thumbnail": "https://i.dummyjson.com/data/products/3/thumbnail.jpg",
+        "images": "https://i.dummyjson.com/data/products/3/1.jpg"
+    }
+]
+
+const userData = userRandom.filter((val)=>{
+ return val.price < 800
+})
+//console.log(userData);
+
+fetch('https://dummyjson.com/carts').then((res)=>{
+ return res.json();
+}).then((result)=> {
+    return result.carts
+}).then((value)=> {
+   let asfg = value[0].products.filter((priceVal)=> priceVal.price > 100)
+   let ttlPrice = asfg.reduce((acc,item)=> acc + item.price ,  )
+   console.log(asfg)
+   console.log(ttlPrice)
+})
+
