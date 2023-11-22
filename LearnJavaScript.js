@@ -161,4 +161,33 @@ let hasOwnObj = {1:'a',2:'b'}
 
 let destruObj = {name:'Ankit',age:26,emailId:'ankit@gmail.com'}
 let {name: n , age: ag, emailId: e} = destruObj;
-console.log(n + ag + e);
+//console.log(n + ag + e);
+
+// functions ============================
+let nameTwo = 'Ayush'
+let namethree = 'Kumar'
+function one(){
+    namethree = 'Verma'
+    function two(){
+        namethree = 'Lodhi'
+        nameTwo = 'Rishab'
+        function three(){
+            nameTwo = 'Hemant'
+            namethree = 'Rajpoot'
+            // console.log('three func ' + nameTwo)
+            // console.log(namethree);
+        }
+        
+        // console.log('two func ' + nameTwo)
+        three()
+        
+    }
+    // console.log(nameTwo)
+    
+    two()
+}
+one();
+
+(function chai(){
+    console.log('Hello ankit')
+})();
