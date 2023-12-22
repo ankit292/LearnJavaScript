@@ -251,7 +251,7 @@ const userRandom = [
 const userData = userRandom.filter((val)=>{
  return val.price < 800
 })
-//console.log(userData);
+// console.log(userData);
 
 fetch('https://dummyjson.com/carts').then((res)=>{
  return res.json();
@@ -259,7 +259,7 @@ fetch('https://dummyjson.com/carts').then((res)=>{
     return result.carts
 }).then((value)=> {
    let asfg = value[0].products.filter((priceVal)=> priceVal.price > 100)
-   let ttlPrice = asfg.reduce((acc,item)=> acc + item.price ,  )
+   let ttlPrice = asfg.reduce((acc,item)=> acc.price +  item.price)
    console.log(asfg)
    console.log(ttlPrice)
 })
